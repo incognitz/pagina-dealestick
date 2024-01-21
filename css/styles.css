@@ -35,6 +35,31 @@ nav a {
     font-weight: 500;
     transition: color 0.3s ease-in-out;
     white-space: nowrap;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 8px 15px; /* Ajusta el espaciado interno */
+}
+
+/* Sección de Inicio */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.3em;
+    color: #fff;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
 /* Sección de Inicio */
@@ -54,45 +79,35 @@ p {
     color: #fff;
 }
 
+
 /* Sección de Productos */
-.Productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
+.Productos,
+.SobreNosotros,
+footer {
+    background-color: #333;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    margin: 20px;
+    padding: 20px;
 }
 
-.Productos div {
-    flex: 1;
-    margin: 10px;
-    background-color: #333;
-    padding: 10px;
+/* Sección de Productos */
+.Productos div,
+.SobreNosotros h3,
+.SobreNosotros p,
+.Contacto div {
     border: 1px solid #ddd;
     border-radius: 12px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
 }
 
-.Productos h2 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
+.Productos h2,
+.SobreNosotros h3 {
+    font-size: 2em;
     font-weight: 600;
     color: #fff;
-}
-
-.Productos img {
-    max-width: 100%;
-    height: auto; /* Para mantener la proporción */
-    border-radius: 12px;
-}
-
-.Productos div:hover {
-    transform: scale(1.05);
 }
 
 /* Sección Sobre Nosotros */
@@ -126,15 +141,13 @@ p {
 
 /* Pie de Página */
 footer {
-    background-color: #333;
-    color: #fff;
     padding: 20px 0;
 }
 
 .Contacto {
     display: flex;
     justify-content: space-around;
-    max-width: 100%;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -143,8 +156,8 @@ footer {
 }
 
 .Contacto img {
-    width: 20px;
-    margin-bottom: 5px;
+    width: 30px;
+    margin-bottom: 10px;
 }
 
 /* Botón de WhatsApp */
@@ -169,6 +182,12 @@ a img {
     nav a {
         margin: 0 30px;
     }
+
+    a img {
+        width: 60px;
+        height: 60px;
+    }
+}
 
     a img {
         width: 60px;
