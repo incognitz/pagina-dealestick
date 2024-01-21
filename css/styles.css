@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Ajustes generales */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
@@ -17,7 +12,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 25px;
+    padding: 15px;
 }
 
 h1 {
@@ -35,24 +30,19 @@ nav {
 nav a {
     text-decoration: none;
     color: #ffffff;
-    margin: 0 30px;
+    margin: 0 15px;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
 
-nav a:hover {
-    color: #45A2FF;
-}
-
-
 /* Sección de Inicio */
 .inicio {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .logo img {
-    width: 210px;
+    width: 50%; /* Ajusta el tamaño de la imagen */
     margin-bottom: 5px;
     border-radius: 50%;
 }
@@ -62,24 +52,23 @@ p {
     color: #fff;
 }
 
-
 /* Sección de Productos */
 .Productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 30px 0;
+    margin: 20px 0;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 10px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Productos div {
     flex: 1;
-    margin: 20px;
+    margin: 10px;
     background-color: #333;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 12px;
     text-align: center;
@@ -89,13 +78,14 @@ p {
 
 .Productos h2 {
     margin-bottom: 10px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     color: #fff;
 }
 
 .Productos img {
     max-width: 100%;
+    height: auto; /* Para mantener la proporción */
     border-radius: 12px;
 }
 
@@ -103,12 +93,11 @@ p {
     transform: scale(1.05);
 }
 
-
 /* Sección Sobre Nosotros */
 .SobreNosotros {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    padding: 40px;
+    max-width: 100%;
+    margin: 0 auto 20px;
+    padding: 20px;
     text-align: justify;
     background-color: #333;
     border-radius: 12px;
@@ -117,33 +106,33 @@ p {
 
 .SobreNosotros h3 {
     margin-top: 20px;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 600;
     color: #fff;
 }
 
 .SobreNosotros p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #fff;
     line-height: 1.6;
 }
 
 .SobreNosotros h3,
 .SobreNosotros p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Pie de Página */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .Contacto {
     display: flex;
     justify-content: space-around;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -152,22 +141,42 @@ footer {
 }
 
 .Contacto img {
-    width: 30px;
-    margin-bottom: 10px;
+    width: 20px;
+    margin-bottom: 5px;
 }
 
 /* Botón de WhatsApp */
 a img {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
-a img:hover {
-    transform: scale(1.1);
+@media screen and (min-width: 768px) {
+    /* Estilos adicionales para pantallas más grandes */
+    .logo img {
+        width: 210px;
+    }
+
+    .Productos div {
+        flex: 0.45; /* Ajusta el tamaño de los elementos en pantallas más grandes */
+    }
+
+    .SobreNosotros {
+        max-width: 800px;
+    }
+
+    .Contacto img {
+        width: 30px;
+    }
+
+    a img {
+        width: 60px;
+        height: 60px;
+    }
 }
