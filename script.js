@@ -1,34 +1,28 @@
-// script.js
-document.addEventListener('DOMContentLoaded', function () {
-    // Cambio de color del título al pasar el ratón
-    const tituloPrincipal = document.querySelector('h1');
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleccionar todos los enlaces de navegación
+    const navLinks = document.querySelectorAll("nav a");
 
-    tituloPrincipal.addEventListener('mouseover', function () {
-        cambiarColorTexto('#45A2FF');
-    });
-
-    tituloPrincipal.addEventListener('mouseout', function () {
-        cambiarColorTexto('#fff');
-    });
-
-    function cambiarColorTexto(color) {
-        tituloPrincipal.style.color = color;
-    }
-
-    // Animación de desplazamiento suave al hacer clic en los enlaces del menú
-    const enlacesMenu = document.querySelectorAll('nav a');
-
-    enlacesMenu.forEach(enlace => {
-        enlace.addEventListener('click', function (event) {
+    // Añadir un evento de clic a cada enlace
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            // Prevenir el comportamiento predeterminado del enlace
             event.preventDefault();
 
-            const destinoId = this.getAttribute('href').substring(1);
-            const destino = document.getElementById(destinoId);
+            // Obtener el ID del destino desde el atributo href
+            const targetId = this.getAttribute("href").substring(1);
 
-            if (destino) {
+            // Obtener el elemento de destino
+            const targetElement = document.getElementById(targetId);
+
+            // Verificar si el elemento de destino existe
+            if (targetElement) {
+                // Calcular la posición del elemento de destino
+                const offsetTop = targetElement.offsetTop;
+
+                // Realizar un desplazamiento suave hacia el elemento de destino
                 window.scrollTo({
-                    top: destino.offsetTop,
-                    behavior: 'smooth'
+                    top: offsetTop,
+                    behavior: "smooth",
                 });
             }
         });
