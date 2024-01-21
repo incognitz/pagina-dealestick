@@ -1,196 +1,164 @@
-/* Ajustes generales */
+@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@300;500;700 & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;    ;
+    background-color: #f7f7f7;
     color: #333;
-    background-color: #f5f5f5;
 }
 
 /* Encabezado */
 header {
-    background-color: #333;
+    background-color: #252525;
     color: #fff;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
-}
-
-h1 {
-    font-size: 1.3em;
-    color: #fff;
-    margin: 0;
+    border-radius: 0 0 20px 20px;
 }
 
 nav {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
+}
+
+nav h1 {
+    font-size: 1.2em;
 }
 
 nav a {
     text-decoration: none;
-    color: #ffffff;
-    margin: 0 15px;
-    font-weight: 500;
+    color: #fff;
+    font-weight: bold;
     transition: color 0.3s ease-in-out;
-    white-space: nowrap;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 8px 15px; /* Ajusta el espaciado interno */
 }
 
-/* Sección de Inicio */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
+nav a:hover {
+    color: #67B3FF;
 }
 
-h1 {
-    font-size: 1.3em;
-    color: #fff;
-    margin: 0;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-/* Sección de Inicio */
+/* Inicio */
 .inicio {
     text-align: center;
-    margin-top: 20px;
+    padding: 30px 20px;
 }
 
+.inicio p {
+    font-size: 0.8em;
+}
+
+/* Logo */
 .logo img {
-    width: 50%;
-    margin-bottom: 5px;
+    max-width: 150px;
+    height: auto;
     border-radius: 50%;
 }
 
-p {
-    font-size: 1em;
-    color: #fff;
+/* Cuerpo de Página */
+.Productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
 }
 
-
-/* Sección de Productos */
-.Productos,
-.SobreNosotros,
-footer {
-    background-color: #333;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff;
+.Productos div {
+    background-color: #fff;
     margin: 20px;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+    width: 100%;
 }
 
-/* Sección de Productos */
-.Productos div,
-.SobreNosotros h3,
-.SobreNosotros p,
-.Contacto div {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    margin: 10px;
-    padding: 10px;
+.Productos h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-.Productos h2,
-.SobreNosotros h3 {
-    font-size: 2em;
-    font-weight: 600;
-    color: #fff;
-}
-
-/* Sección Sobre Nosotros */
-.SobreNosotros {
+.Productos img {
     max-width: 100%;
-    margin: 0 auto 20px;
-    padding: 20px;
-    text-align: justify;
-    background-color: #333;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Productos div:hover {
+    transform: scale(1.05);
+}
+
+.Productos p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+
+/* Sobre Nosotros */
+.SobreNosotros {
+    background-color: #f9f9f9;
+    margin: 40px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .SobreNosotros h3 {
-    margin-top: 20px;
     font-size: 2em;
-    font-weight: 600;
-    color: #fff;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .SobreNosotros p {
-    font-size: 1em;
-    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
     line-height: 1.6;
 }
 
-.SobreNosotros h3,
-.SobreNosotros p {
-    margin-bottom: 10px;
+.SobreNosotros > p {
+    margin-bottom: 20px;
 }
 
 /* Pie de Página */
 footer {
-    padding: 20px 0;
+    background-color: #252525;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    margin-top: 50px;
 }
 
 .Contacto {
     display: flex;
     justify-content: space-around;
-    max-width: 600px;
-    margin: 0 auto;
+    align-items: center;
 }
 
 .Contacto div {
     text-align: center;
+    color: #fff;
 }
 
 .Contacto img {
     width: 30px;
-    margin-bottom: 10px;
+    height: 30px;
+    margin-bottom: 4px;
 }
 
-/* Botón de WhatsApp */
-a img {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-@media screen and (min-width: 768px) {
-    /* Estilos adicionales para pantallas más grandes */
-    nav {
-        justify-content: flex-end;
-        margin-top: 0;
-    }
-
-    nav a {
-        margin: 0 30px;
-    }
-
-    a img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-    a img {
-        width: 60px;
-        height: 60px;
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .SobreNosotros {
+        padding: 30px 15px;
     }
 }
